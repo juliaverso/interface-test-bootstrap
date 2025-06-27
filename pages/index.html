@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curso MidJourney</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      background-color: #000;
+      border-right: 1px solid #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 350px;
+      z-index: 1050;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      overflow-y: auto;
+    }
+
+    .sidebar.visible {
+      transform: translateX(0);
+    }
+
+    .main-content {
+      margin-left: 0;
+      transition: margin-left 0.3s ease-in-out;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .main-content.shifted {
+      margin-left: 350px;
+    }
+
+    .menu-toggle,
+    .close-sidebar {
+      background: none;
+      border: none;
+      color: #f8f9fa;
+      font-size: 1.5rem;
+    }
+
+    .close-sidebar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .nav-link.active {
+      background-color: #222;
+      border-left: 4px solid #0d6efd;
+    }
+
+    .video-box {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR ABERTA -->
+  <nav id="sidebar" class="sidebar visible py-4 text-light">
+    <button id="closeSidebarBtn" class="close-sidebar" aria-label="Fechar menu">&times;</button>
+    <div class="px-4 mt-4">
+      <h5>Curso</h5>
+      <p class="text-muted">01. Conhecendo o MidJourney</p>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Apresentação</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Preparando ambiente</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Explorando o MidJourney</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Ajustes e estilos</a></li>
+        <li class="nav-item mb-2"><a class="nav-link active text-primary fw-bold" href="#">Variações, upscale e refatoração</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Para valorizar ainda mais</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO COM SHIFT INICIAL -->
+  <main id="main-content" class="main-content shifted py-4">
+    <div class="mb-4 px-5">
+
+      <!-- TOPO -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex align-items-center">
+          <button id="toggleSidebarBtn" class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+          <h4 id="titulo-aula" class="mb-0">05. Variações, upscale e refatoração de imagens</h4>
+        </div>
+        <a href="#" id="btnProxima" class="btn btn-primary">Próxima Aula</a>
+      </div>
+
+      <!-- VÍDEO -->
+      <div class="video-box mb-4 ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/13RuIvRvA9k" 
+          title="Vídeo do Curso" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+     <!-- Transcrição -->
+                <div class="bg-light text-dark p-4 rounded" id="transcricao">
+                <h5>Transcrição</h5>
+                <p>O fluxo de trabalho permite uma grande melhoria na qualidade das imagens, tornando-as mais realistas. Além de imagens comuns, o método também pode ser aplicado para aprimorar renders 3D, especialmente útil para profissionais de arquitetura. O processo é descrito como simples, facilitando a compreensão e a aplicação por qualquer usuário. O apresentador demonstra o uso do modelo Pixel Wave, enfatizando que outros modelos também podem ser utilizados no fluxo de trabalho. </p>
+                <p>Discussão sobre modelos de upscale que funcionam melhor para melhorar a aparência de pele em imagens. Explicação sobre como importar uma imagem para o sistema e o funcionamento básico do nó de upscale. Demonstração do método básico de upscale e suas limitações na melhoria da qualidade da imagem. Descrição do fluxo de trabalho que envolve aumentar a imagem e depois trabalhar em detalhes específicos separadamente.</p>
+                <p>O vídeo inicia explicando o conceito de 'imagem para imagem', onde uma imagem é importada para gerar uma nova com base nela. O apresentador discute como ajustar a interferência da IA na imagem, ressaltando a importância de encontrar um equilíbrio nas configurações. Ele convida os espectadores a se inscreverem em seu curso para aprender mais sobre as configurações e fluxos de trabalho, enfatizando a necessidade de entender como usar as ferramentas disponíveis. O apresentador conclui reforçando a importância de não apenas ter acesso a workflows, mas também de saber como utilizá-los efetivamente.</p>
+                <p>O processo de recorte das imagens é explicado, garantindo que elas não fiquem borradas. O apresentador demonstra como renderizar uma imagem arquitetônica para mostrar a diferença na qualidade. A técnica de restaurar imagens é introduzida, utilizando uma imagem pequena como exemplo. É detalhado como importar a imagem e definir a quantidade de cortes para melhorar a resolução. O resultado final é mostrado, com comentários sobre as partes que foram bem-sucedidas e as que poderiam ser melhores.</p>
+                <p>Recomenda-se o uso deste fluxo de trabalho para restaurar imagens, tanto de pessoas quanto de arquitetura. O vídeo demonstra como a qualidade das imagens pode ser significativamente melhorada, tornando os detalhes mais nítidos. É possível executar este fluxo de trabalho gratuitamente no site da Nord, onde todos os modelos necessários estão disponíveis. O criador do vídeo atualiza regularmente seus fluxos de trabalho, garantindo que eles estejam sempre melhorados e otimizados.</p>
+                </div>
+
+    </div>
+  </main>
+
+  <!-- SCRIPT -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+    const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const btnProxima = document.getElementById('btnProxima');
+    const tituloAula = document.getElementById('titulo-aula');
+    const transcricao = document.getElementById('transcricao');
+
+    let aulaAtual = 1;
+
+    btnProxima.addEventListener('click', function (e) {
+      e.preventDefault();
+      aulaAtual++;
+
+      if (aulaAtual === 2) {
+        tituloAula.textContent = '06. Finalizando com Estilo';
+        transcricao.innerHTML = `
+          <h5>Transcrição</h5>
+          <p><strong>Guilherme:</strong> Agora vamos aplicar os estilos finais para que suas imagens fiquem realmente impactantes e profissionais.</p>
+          <p>Vamos explorar filtros, embelezamento e ajustes para finalização do seu trabalho.</p>
+        `;
+        btnProxima.textContent = 'Aula Finalizada';
+        btnProxima.classList.replace('btn-primary', 'btn-success');
+        btnProxima.disabled = true;
+      }
+    });
+
+    toggleSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.add('visible');
+      mainContent.classList.add('shifted');
+    });
+
+    closeSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.remove('visible');
+      mainContent.classList.remove('shifted');
+    });
+  </script>
+</body>
+</html>

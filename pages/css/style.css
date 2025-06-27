@@ -1,0 +1,13 @@
+.sidebar {
+  border-right: 1px solid #333;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar .nav-link.active {
+  background-color: #222;
+  border-left: 4px solid #0d6efd;
+}
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
