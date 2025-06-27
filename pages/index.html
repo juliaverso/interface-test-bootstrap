@@ -20,7 +20,7 @@
       left: 0;
       height: 100%;
       width: 350px;
-      z-index: 1050;
+      z-index: 900;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
       overflow-y: auto;
@@ -33,8 +33,8 @@
     .main-content {
       margin-left: 0;
       transition: margin-left 0.3s ease-in-out;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
 
     .main-content.shifted {
@@ -66,10 +66,22 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark" style="z-index: 1000;">
+  <div class="container">
+    <a class="navbar-brand" href="#">alura</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="O que você quer aprender?">
+      <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav>
+
 
   <!-- SIDEBAR ABERTA -->
   <nav id="sidebar" class="sidebar visible py-4 text-light">
-    <button id="closeSidebarBtn" class="close-sidebar" aria-label="Fechar menu">&times;</button>
+    <div style="margin-top: 50px;">
+    <button id="closeSidebarBtn" class="close-sidebar" aria-label="Fechar menu" style="margin-top: 50px;">&times;</button>
     <div class="px-4 mt-4">
       <h5>Curso</h5>
       <p class="text-muted">01. Conhecendo o MidJourney</p>
@@ -82,6 +94,7 @@
         <li class="nav-item mb-2"><a class="nav-link text-light" href="#">Para valorizar ainda mais</a></li>
       </ul>
     </div>
+  </div>
   </nav>
 
   <!-- CONTEÚDO COM SHIFT INICIAL -->
@@ -91,8 +104,16 @@
       <!-- TOPO -->
       <div class="d-flex justify-content-between align-items-center mb-4">
         <div class="d-flex align-items-center">
+          <div class="d-flex flex-column ms-3">
+            <div class="d-flex align-items-center">
           <button id="toggleSidebarBtn" class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-          <h4 id="titulo-aula" class="mb-0">05. Variações, upscale e refatoração de imagens</h4>
+          <h4 id="titulo-aula" class="mb-0">05. Variações, upscale e refatoração de imagens</h4></div>
+          <ul class="d-flex text-white mt-3" style="list-style: none;">
+            <li><a class="text-white px-2" href="#"> tema </a></li>/
+            <li><a class="text-white px-2" href="#"> curso </a></li>/
+            <li><a class="text-white px-2" href="#"> aula anterior </a></li>
+          </ul></div>
+          
         </div>
         <a href="#" id="btnProxima" class="btn btn-primary">Próxima Aula</a>
       </div>
