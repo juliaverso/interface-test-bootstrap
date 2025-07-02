@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>EduPlatform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+  body {
+    background-color: #010c13;
+     font-family: "Figtree", sans-serif;
+  }
+
+  .gradient-box {
+    background: linear-gradient(135deg, #037F8C, #033F61);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    animation: fadeIn 1s ease;
+  }
+
+  .btn-dark, .btn-outline-light, .btn-outline-secondary {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-dark:hover, .btn-outline-light:hover, .btn-outline-secondary:hover, .btn-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .animation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .xp-badge {
+    font-size: 0.9rem;
+    color: #ffb400;
+  }
+
+  .badge-popular {
+    background-color: #F285AD;
+  }
+
+  .badge-new {
+    background-color: #034159;
+  }
+
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <img class="navbar-brand" src="/assets/logo-ulbra.png" alt="Ulbra">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="O que você quer aprender?">
+      <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav>
+
+
+<!-- Conteúdo -->
+<div class="container-fluid" style="max-width: fit-content;">
+  <div class="d-flex mt-4">
+    <!-- Sidebar -->
+    <div class="col-lg-3 mb-4 mt-5">
+      <div class="gradient-box">
+        <h6>Bem-vindo!</h6>
+        <h5>Olá, Aluno!</h5>
+        <p>Pronto para começar sua jornada de aprendizado? Vamos explorar juntos!</p>
+        <a class="btn btn-outline-light w-100 mb-3" href="#">Ir para Dashboard</a>
+      </div>
+
+      <!-- Primeiros Passos -->
+      <div class="mt-4 p-3">
+        <h4 class="text-white mb-3">Primeiros Passos</h4>
+        <div class="d-grid gap-2 mt-2">
+          <button class="btn btn-outline-secondary py-3">Explorar Cursos</button>
+          <button class="btn btn-outline-secondary py-3">Criar Cronograma</button>
+          <button class="btn btn-outline-secondary py-3">Definir Metas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteúdo Central -->
+    <div class="col-lg-9 bg-white p-4 shadow-sm rounded mx-3">
+      <div class="text-center mb-4">
+        <h1><strong>Transforme sua carreira com <span style="color:#037F8C;">conhecimento</span></strong></h1>
+        <p class="lead">Descubra mais de 500 cursos online, trilhas de aprendizado personalizadas e uma comunidade apaixonada por aprender.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a class="btn btn-light" href="#" style="background:#034159; color: white;">Começar Agora</a>
+          <a class="btn btn-outline-secondary" href="#">Ver Dashboard</a>
+        </div>
+      </div>
+
+      <!-- Métricas -->
+      <div class="d-flex row text-center mb-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="p-3 bg-light shadow-sm rounded">
+            <h4>500+</h4>
+            <p class="text-muted mb-0">Cursos</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-3 bg-light shadow-sm rounded">
+            <h4>50k+</h4>
+            <p class="text-muted mb-0">Estudantes Ativos</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-3 bg-light shadow-sm rounded">
+            <h4>4.8</h4>
+            <p class="text-muted mb-0">Avaliação Média</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trilhas de Aprendizado -->
+      <h3 class="mb-3 mt-5"><strong>Trilhas de Aprendizado</strong></h3>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <h5>Desenvolvedor Frontend</h5>
+            <p>Torne-se um dev completo</p>
+            <small>8 cursos • 120 horas</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <h5>Designer UX/UI</h5>
+            <p>Experiências digitais incríveis</p>
+            <small>6 cursos • 80 horas</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <h5>Marketing Digital</h5>
+            <p>Domine o marketing digital</p>
+            <small>10 cursos • 100 horas</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cursos Recomendados -->
+      <h3 class="mb-3 mt-5"><strong>Cursos Recomendados</strong></h3>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <span class="badge badge-popular mb-2">Popular</span>
+            <h6><strong>Desenvolvimento Web para Iniciantes</strong></h6>
+            <p class="text-muted">HTML, CSS e JS do zero</p>
+            <small>Ana Silva • 20h • 1.250 alunos</small>
+            <p class="mt-2"><strong>R$ 99,90</strong></p>
+            <a class="btn btn-dark w-100" href="#">Começar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <span class="badge badge-new mb-2">Novo</span>
+            <h6><strong>Design UX/UI Essencial</strong></h6>
+            <p class="text-muted">Fundamentos de interfaces</p>
+            <small>Carlos Mendes • 15h • 890 alunos</small>
+            <p class="mt-2"><strong>R$ 129,90</strong></p>
+            <a class="btn btn-dark w-100" href="#">Começar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="animation bg-light p-3 shadow-sm rounded">
+            <span class="badge badge-popular mb-2">Popular</span>
+            <h6><strong>Marketing Digital Básico</strong></h6>
+            <p class="text-muted">Primeiros passos no marketing</p>
+            <small>Maria Santos • 12h • 2.100 alunos</small>
+            <p class="mt-2"><strong>R$ 89,90</strong></p>
+            <a class="btn btn-dark w-100" href="#">Começar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chamada final -->
+      <div class="gradient-box text-center mt-4">
+        <h4><strong>Pronto para começar sua jornada?</strong></h4>
+        <p>Junte-se a milhares de estudantes que já transformaram suas carreiras com nossos cursos.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a class="btn btn-light" href="#">Explorar Cursos</a>
+          <a class="btn btn-outline-light" href="#"> Ir para Dashboard</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
